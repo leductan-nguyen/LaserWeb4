@@ -69,7 +69,7 @@ class Com extends React.Component {
         let {settings, dispatch} = this.props;
         let server = settings.comServerIP;
         CommandHistory.write('Connecting to Server @ ' + server, CommandHistory.INFO);
-        //console.log('Connecting to Server ' + server);
+        console.log('Connecting to Server ' + server);
         socket = io('ws://' + server);
 
         socket.on('connect', function(data) {
